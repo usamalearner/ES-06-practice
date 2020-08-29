@@ -45,3 +45,54 @@ setTimeout(function(){
 //  it will shpw undefined q k name1 me kuch aya hi nhi he therefore we use promise
 
 // promise
+// var promise = new Promise(function(resolve,reject){
+//     var zinger = "available"
+//     if(zinger === "available"){
+//         resolve("usama ne zinger khila dia")
+//     }
+//     else{
+//         reject("usama ne zinger nhi khilaya")
+//     }
+// })
+// promise.then(function(data){
+//     console.log("resolve",data)
+// })
+// .catch(function(error){
+//     console.log("reject",error)
+// })
+
+// firebas se dataa NIKALNA
+
+// var promise1 = new Promise(function(resolve,reject){
+// firebase.database().ref("users").on("child_added",function(data){
+//     if(data.val()){
+//         resolve(data.val())
+//     }else{
+//         reject("something went wrong")
+//     }
+// })
+// })
+// promise1.then(function(data){
+//     console.log(data)
+// })
+// .catch(function(err){
+//     console.log(err)
+// })
+
+var promise = new Promise(function(resolve,reject){
+        if(true){
+            setTimeout(()=>{
+                resolve("it is resolved")
+            })
+           }
+        else{
+            reject("it is rejected")
+        }
+    })
+    console.log(promise) 
+    promise.then(function(data){
+        console.log("resolve",data)
+    })
+    .catch(function(error){
+        console.log("reject",error)
+    })
